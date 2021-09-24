@@ -1,0 +1,59 @@
+<mvc:View    
+    xmlns="sap.m"    
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    displayBlock="true"
+    controllerName="com.sfc.fragments.controller.App"   
+>
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+                        <core:Fragment fragmentName="com.sfc.fragments.view.Button" type="XML" />
+                        <Panel headerText="Personal Profile">      
+                            <VBox class="sapU iSmallMargin">
+                                <f:SimpleForm   editable="false" 
+                                                layout="ResponsiveGridLayout" 
+                                                labelSpanXL="3" 
+                                                labelSpanL="3"
+                                                labelSpanM="3" 
+                                                labelSpanS="12" 
+                                                adjustLabelSpan="false" 
+                                                emptySpanXL="4" 
+                                                emptySpanL="4" 
+                                                emptySpanM="4" 
+                                                emptySpanS="0" 
+                                                columnsXL="1"
+                                                columnsL="1" 
+                                                columnsM="1" 
+                                                singleContainerFullSize="false">
+                                    <f:content>
+                                        <Label text="{i18n>name}"/>
+                                        <Text text="{name}"/>
+                                        <Label text="{i18n>sex}"/>
+                                        <Text text="{sex}"/>
+                                        <Label text="{i18n>role}"/>                                    
+                                        <Text text="{role}"/>
+                                        <Label text="{i18n>site}"/>
+                                        <Text text="{site}"/>
+                                        <Label text="{i18n>location}"/>
+                                        <Text text="{location}"/>
+                                        <Label text="{i18n>email}"/>
+                                        <Text text="{email}"/>
+                                        <Label text="{i18n>birthday}"/>
+                                        <Text text="{birthday}"/>
+                                    </f:content>
+                                </f:SimpleForm>                                                  
+                            </VBox>     
+                            <HBox width="100%" justifyContent="Center">
+                                <Button id="buttonModify" text="Modify" press=".onbuttonModifyPress" class="sapUiTinyMarginEnd"/>      
+                            </HBox>
+                        </Panel>                       
+                    </content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

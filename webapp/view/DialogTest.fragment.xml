@@ -1,0 +1,49 @@
+
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core" >
+   <Dialog
+      id="dialogPersonalFragment"
+      title="Dialog Test">
+        <Panel headerText="Personal Profile">      
+            <VBox class="sapU iSmallMargin">
+                <f:SimpleForm   editable="false" 
+                                layout="ResponsiveGridLayout" 
+                                labelSpanXL="3" 
+                                labelSpanL="3"
+                                labelSpanM="3" 
+                                labelSpanS="12" 
+                                adjustLabelSpan="false" 
+                                emptySpanXL="4" 
+                                emptySpanL="4" 
+                                emptySpanM="4" 
+                                emptySpanS="0" 
+                                columnsXL="1"
+                                columnsL="1" 
+                                columnsM="1" 
+                                singleContainerFullSize="false">
+                    <f:content>
+                        <Label text="{i18n>name}"/>
+                        <Text text="{name}"/>
+                        <Label text="{i18n>sex}"/>
+                        <Text text="{sex}"/>
+                        <Label text="{i18n>role}"/>                                    
+                        <Text text="{role}"/>
+                        <Label text="{i18n>site}"/>
+                        <Text text="{site}"/>
+                        <Label text="{i18n>location}"/>
+                        <Text text="{location}"/>
+                        <Label text="{i18n>email}"/>
+                        <Text text="{email}"/>
+                        <Label text="{i18n>birthday}"/>
+                        <Text text="{birthday}"/>
+                    </f:content>
+                </f:SimpleForm>                                                  
+            </VBox>     
+            <HBox width="100%" justifyContent="Center">
+                <Button id="buttonConfirm" text="Confirm" press=".onbuttonConfirmPress"/>      
+            </HBox>
+        </Panel>        
+   </Dialog>
+</core:FragmentDefinition>

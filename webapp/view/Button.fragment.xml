@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Panel headerText="XML Fragment">
+        <VBox>
+            <HBox class="sapUiSmallMarginBottom">
+                <HBox width="6em">
+                    <Button id="buttonFragmentDisplay" text="Display" press=".onButtonFragmentPress('Display')"/>
+                </HBox>
+                <HBox width="6em" class="sapUiTinyMarginBegin">
+                    <Button id="buttonFragmentEdit" text="Edit" press=".onButtonFragmentPress('Edit')"/>
+                </HBox>
+                <HBox width="6em" class="sapUiTinyMarginBegin" >
+                    <Button id="buttonFragmentSave" text="Save" press=".onButtonFragmentPress('Save')"/>
+                </HBox>
+                <HBox width="6em" class="sapUiTinyMarginBegin" >    
+                    <Button id="buttonFragmentDelete" text="Delete"  press=".onButtonFragmentPress('Delete')"/>
+                </HBox>
+            </HBox>
+        </VBox>
+    </Panel>
+</core:FragmentDefinition>

@@ -1,0 +1,55 @@
+
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core"
+   >
+   <Dialog
+      id="dialogPersonalFragment"
+      title="Dialog Personal">
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm   editable="true" 
+                            layout="ColumnLayout"                                
+                            adjustLabelSpan="false" 
+                            columnsXL="2"
+                            columnsL="2" 
+                            columnsM="2" 
+                            singleContainerFullSize="false">
+                <f:content>
+                    <Label text="{i18n>name}" required="true"/>
+                    <Text text="{name}"/>
+                    <Label text="{i18n>sex}" required="true"/>
+                    <RadioButtonGroup   id="personalFragmentRadiobuttongroupSex"
+                                        selectedIndex="{=${sex}==='M'? 0 : 1}"
+                                        columns="4"
+                                        width="100%"
+                                        class="sapUiMediumMarginBottom">
+                            <RadioButton text="M" select=".onRadiobutton(this)" class="sapUiMediumMarginBottom"/>
+                            <RadioButton text="F" select=".onRadiobutton(this)"/>
+                            <RadioButton text="Gay" enabled="false"/>
+                            <RadioButton text="Lesbian" enabled="false"/>
+                    </RadioButtonGroup>
+                    <Label text="{i18n>role}" required="true"/>
+                    <ComboBox
+                    id="personalFragmentComboBoxUserRole"
+                    selectedKey="{=${role}==='Admin'? 'Admin' : 'User'}"
+                    items="{
+                        path: '/RoleCollection/UserRole',
+                        sorter: { path: 'text' }
+                    }">
+                    <core:Item key="{key}" text="{text}" />
+                    </ComboBox>                    
+                    <Label text="{i18n>site}"/>                    
+                    <Input id="personalFragmentInputSite" type="Text" value="{site}"/>                    
+                    <Label text="{i18n>location}"/>
+                    <Input id="personalFragmentInputLocation" type="Text" value="{location}"/> 
+                    <Label text="{i18n>email}"/>
+                    <Input id="personalFragmentInputEmail" type="Text" value="{email}"/> 
+                    <Label text="{i18n>birthday}" required="true"/>
+                    <Text text="{birthday}"/>
+                    <Button id="personalFragmentButtonConfirm" text="Confirm" press=".onbuttonConfirmPress"/>  
+                </f:content>
+            </f:SimpleForm>                                                  
+        </VBox>    
+   </Dialog>
+</core:FragmentDefinition>
