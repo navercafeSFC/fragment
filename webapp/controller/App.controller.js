@@ -89,17 +89,16 @@ sap.ui.define([
             },
 
             _handleCloseDialogPersonal: function () {
-                this.createId("personal")
+                //this.createId("personal")
                 //var oDialogPersonalFragment = this.byId("dialogPersonalFragment");
                 var oDialogPersonalFragment = this.byId(sap.ui.core.Fragment.createId(this.createId("personal"), "dialogPersonalFragment"));
                 oDialogPersonalFragment.close();
+                oDialogPersonalFragment.destroy();
             },            
-
-
             
             getModel : function (sName) {
-			    return this.getView().getModel(sName);
-		    },
+              return this.getView().getModel(sName);
+            },
 
             setModel : function (oModel, sName) {
                 return this.getView().setModel(oModel, sName);
